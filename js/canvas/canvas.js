@@ -1,6 +1,5 @@
-
-import { vertexCode } from "./vertex_shader.js";
-import { fragmentCode } from "./fragment_shader.js";
+import { vertexCode } from "../vertex_shaders/vertex_shader.js";
+import { fragmentCode } from "../fragment_shaders/fragment_shader.js";
 
 // Prepare the canvas and get WebGL context
 
