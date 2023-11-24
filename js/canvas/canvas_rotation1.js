@@ -1,10 +1,10 @@
 
 import { vertexCode } from "../vertex_shaders/vertex_shader_rot.js";
-import { fragmentCode } from "../fragment_shaders/fragment_shader_rot.js";
+import { fragmentCode } from "../fragment_shaders/fragment_shader_rot1.js";
 
 // Prepare the canvas and get WebGL context
 
-const canvas = document.getElementById('mycanvasr');
+const canvas = document.getElementById('mycanvasr1');
 const gl = canvas.getContext('experimental-webgl');
 
 // Define the geometry and store it in buffer objects  ----------------
@@ -86,7 +86,7 @@ const mov_matrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
 const view_matrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
 
 //translating z
-view_matrix[14] = view_matrix[14]-2.5; //zoom
+view_matrix[14] = view_matrix[14]-2.50; //zoom
 
 // Rotation --------
 
