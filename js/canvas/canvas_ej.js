@@ -1,9 +1,9 @@
-import { vertexCode } from "../vertex_shaders/vertex_shader_ej.js";
-import { fragmentCode } from "../fragment_shaders/fragment_shader4.js";
+import { vertexCode } from "../vertex_shaders/vertex_shader.js";
+import { fragmentCode } from "../fragment_shaders/fragment_shader.js";
 
 // Prepare the canvas and get WebGL context
 
-const canvas = document.getElementById('mycanvas4');
+const canvas = document.getElementById('mycanvas');
 const gl = canvas.getContext('experimental-webgl');
 
 // Define the geometry and store it in buffer objects

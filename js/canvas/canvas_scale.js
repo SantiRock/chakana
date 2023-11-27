@@ -1,9 +1,9 @@
-import { vertexCode } from "../vertex_shaders/vertex_shader_ej.js";
-import { fragmentCode } from "../fragment_shaders/fragment_shader4.js";
+import { vertexCode } from "../vertex_shaders/vertex_shader_scale.js";
+import { fragmentCode } from "../fragment_shaders/fragment_shader1.js";
 
 // Prepare the canvas and get WebGL context
 
-const canvas = document.getElementById('mycanvas4');
+const canvas = document.getElementById('mycanvass');
 const gl = canvas.getContext('experimental-webgl');
 
 // Define the geometry and store it in buffer objects
@@ -59,7 +59,20 @@ gl.attachShader(shaderProgram, fragShader);
 
 gl.linkProgram(shaderProgram);
 
-gl.useProgram(shaderProgram); 
+gl.useProgram(shaderProgram);
+
+// Scaling
+
+var Sx = 0.7, Sy = 0.7, Sz = 1.0;
+var xformMatrix = new Float32Array([
+   Sx,   0.0,  0.0,  0.0,
+   0.0,  Sy,   0.0,  0.0,
+   0.0,  0.0,  Sz,   0.0,
+   0.0,  0.0,  0.0,  1.0  
+]);
+
+var u_xformMatrix = gl.getUniformLocation(shaderProgram, 'u_xformMatrix');
+gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix);
 
 
 // Associate the shader programs to buffer objects

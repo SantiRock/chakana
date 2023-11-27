@@ -81,7 +81,7 @@ function get_projection(angle, a, zMin, zMax) {
     ];
 }
 
-const proj_matrix = get_projection(22, (canvas.width * 0.6)/canvas.height,1, 100);
+const proj_matrix = get_projection(22, (canvas.width * 0.55)/canvas.height,1, 100);
 const mov_matrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
 const view_matrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
 
